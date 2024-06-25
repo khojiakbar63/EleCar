@@ -20,6 +20,7 @@ header {
     height: 80px;
     width: 100%;
     color: white;
+    z-index: 1000;
 }
 header .menu-icon{
     display: none;
@@ -28,7 +29,26 @@ header .menu-icon{
 .active {
     color: #4177DC !important;
 }
-
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #fff;
+    background: #4177DC;
+    transition: all 0.1s;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+}
+.btn:hover{
+    background: rgba(65, 119, 220, 0.71);
+}
 .header-wrapper {
     display: flex;
     align-items: center;
@@ -89,7 +109,7 @@ header .side-panel{
     backdrop-filter: blur(10px);
     color: white;
     transition: all 0.3s ease-in-out;
-    z-index: 999;
+    z-index: 999999;
 }
 header .side-panel img {
     position: fixed;
@@ -118,8 +138,8 @@ header .side-panel .side-panel-list li a{
 .none{
     display: none !important;
 }
-/*----------------Intro section*/
 
+/*----------------Intro section*/
 #intro {
     background-color: #0A0A0B;
     display: flex;
@@ -169,14 +189,12 @@ header .side-panel .side-panel-list li a{
 #intro .title-desc-desc span {
     color: #BABEC4;
 }
-
 #intro .cards  {
     display: flex;
     align-items: center;
     justify-content: center;
     max-width: 706px;
 }
-
 #intro .cards .card {
     max-width: 89px;
     margin: 41px 56px;
@@ -199,8 +217,78 @@ header .side-panel .side-panel-list li a{
     transform: scale(0.9);
 }
 
-/*Media-query  for 1200px*/
+/*----------------About section*/
+#about{
+    background-color: #0A0A0B;
+    padding: 72px 0 88px;
+}
+#about .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+#about .wrapper .left-side {
+    max-width: 602px;
+    position: relative;
+    z-index: 1 !important;
+}
+#about .wrapper .left-side .about-img{
+    z-index: 1 !important;
+}
+#about .wrapper .left-side .extra-card {
+    width:197px;
+    height: 104px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    position: absolute;
+    top: 260px;
+    left: 283px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    color: #fff;
+}
+#about .wrapper .left-side .extra-card .extra-one{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+#about .wrapper .left-side .extra-card .extra-two{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+#about .right-side {
+    max-width: 602px;
+    color: #fff;
+}
+#about .right-side .about-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    margin-bottom: 24px;
+    color: #F1F2F3;
+}
+#about .right-side .about-desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #BABEC4;
+    margin-bottom: 48px;
+}
+
+
+
+
+/*Media-query  for 1230px*/
 @media screen and (max-width: 1230px) {
+    /* ---------------Intro section */
     #intro .title-desc-desc {
         margin-bottom: 30px;
     }
@@ -208,10 +296,19 @@ header .side-panel .side-panel-list li a{
         max-width: 280px;
         margin-bottom: 0px;
     }
+    /* ----------------About section */
+    #about .left-side {
+        max-width: 500px;
+    }
+
+    #about .right-side {
+        max-width: 500px;
+    }
 }
 
 /*Media-query  for 992px*/
 @media screen and (max-width: 992px){
+    /*---------Intro section */
     #intro .intro-title {
         font-size: 26px;
         line-height: 36px;
@@ -234,12 +331,22 @@ header .side-panel .side-panel-list li a{
         width: 300px;
         margin-bottom: 0px;
     }
+    /* --------About section*/
+    #about .wrapper {
+        flex-direction: column;
+        justify-content: center;
+        gap: 60px;
+    }
+    #about .wrapper .about-img{
+        width: 100%;
+    }
 }
 
 /*Media-query  for 768px*/
 @media screen and (max-width: 768px) {
     #intro {
         padding: 0px 0 6px;
+        height: auto;
     }
     #intro .intro-title {
         font-size: 28px;
@@ -263,8 +370,9 @@ header .side-panel .side-panel-list li a{
         width: 320px;
         margin-bottom: 10px;
     }
-}
+/*    About section    */
 
+}
 
 /*Media-query  for 576px*/
 
@@ -325,6 +433,27 @@ header .side-panel .side-panel-list li a{
     }
     #intro .cards  card p{
         font-size: 10px;
+    }
+    /*About section*/
+    #about .wrapper{
+        gap: 100px;
+    }
+    #about .wrapper .left-side .extra-card {
+        width:157px;
+        height: 84px;
+        left: 200px;
+        top: 170px;
+    }
+    #about .wrapper .left-side .extra-card .extra-one{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 6px;
+    }
+    #about .wrapper .left-side .extra-card .extra-two{
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 12px;
     }
 }
 

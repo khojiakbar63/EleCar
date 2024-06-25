@@ -3,7 +3,7 @@ function $(selector) {
     return document.querySelector(selector);
 }
 
-
+// Call from HTML
 const menuIcon = $('.menu-icon')
 const sideSanel = $('.side-panel')
 const closeIcon = $('.close-icon')
