@@ -1,0 +1,340 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+body{
+    font-family: "Exo", sans-serif;
+}
+/*-------------------Header*/
+header {
+    position: fixed;
+    top: 0;
+    background-color: #0A0A0B;
+    height: 80px;
+    width: 100%;
+    color: white;
+}
+header .menu-icon{
+    display: none;
+}
+
+.active {
+    color: #4177DC !important;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+}
+
+.logo {
+    width: 71px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: #0A0A0B;
+    color: white;
+    font-size: 16px;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.list .list-item {
+    margin-left: 48px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.list .list-item a {
+    text-decoration: none;
+    color: white;
+    padding: 29px 5px;
+    border-bottom: 0.1px solid transparent;
+
+}
+.list .list-item a:hover{
+    border-bottom: 0.1px solid #fff;
+}
+.list .list-item a:hover {
+    color: #4177DC !important;
+}
+/*----------------Side-panel*/
+
+header .side-panel{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    top: 0px;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: rgba(10, 10, 11, 0.37);
+    backdrop-filter: blur(10px);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+}
+header .side-panel img {
+    position: fixed;
+    top: 10px;
+    left:  10px;
+    width: 40px;
+}
+header .side-panel .side-panel-list{
+    list-style-type: none;
+}
+header .side-panel .side-panel-list li{
+    margin-bottom: 20px;
+    transition: all 0.2s;
+    padding-left:10px;
+}
+header .side-panel .side-panel-list li:hover{
+    border-left: 2px solid #fff;
+}
+header .side-panel .side-panel-list li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+.none{
+    display: none !important;
+}
+/*----------------Intro section*/
+
+#intro {
+    background-color: #0A0A0B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 40px 0 42px;
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+}
+#intro .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#intro .intro-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+#intro .title-desc {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    margin-bottom: 8px;
+}
+#intro .intro-car{
+    transition: all 0.2s;
+}
+#intro .start-btn {
+    width: 90px;
+}
+#intro .intro-car:hover {
+    transform: translateY(15px);
+}
+#intro .title-desc-desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+#intro .title-desc-desc span {
+    color: #BABEC4;
+}
+
+#intro .cards  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 706px;
+}
+
+#intro .cards .card {
+    max-width: 89px;
+    margin: 41px 56px;
+    text-align: center;
+    transition: all 0.2s;
+}
+#intro .cards .card h2 {
+    margin: 16px 6px;
+}
+#intro .cards .card p{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #888B91;
+}
+#intro .start-btn{
+    transition: all 0.2s;
+}
+#intro .start-btn:hover {
+    transform: scale(0.9);
+}
+
+/*Media-query  for 1200px*/
+@media screen and (max-width: 1230px) {
+    #intro .title-desc-desc {
+        margin-bottom: 30px;
+    }
+    #intro .intro-car{
+        max-width: 280px;
+        margin-bottom: 0px;
+    }
+}
+
+/*Media-query  for 992px*/
+@media screen and (max-width: 992px){
+    #intro .intro-title {
+        font-size: 26px;
+        line-height: 36px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    #intro .title-desc {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+    #intro .title-desc-desc {
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+    #intro .intro-car{
+        width: 300px;
+        margin-bottom: 0px;
+    }
+}
+
+/*Media-query  for 768px*/
+@media screen and (max-width: 768px) {
+    #intro {
+        padding: 0px 0 6px;
+    }
+    #intro .intro-title {
+        font-size: 28px;
+        line-height: 38px;
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+    #intro .title-desc {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    #intro .title-desc-desc {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 400;
+        margin-bottom: 53px;
+    }
+    #intro .intro-car{
+        width: 320px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*Media-query  for 576px*/
+
+@media screen and (max-width: 576px){
+    header{
+        height: 56px;
+    }
+    header .header-wrapper{
+        height: 56px;
+    }
+    header .menu-icon{
+        display: block;
+    }
+    header .list {
+        display: none;
+    }
+
+    #intro {
+        padding: 27px 0 32px;
+        height: calc(100vh - 56px);
+        margin-top: 56px;
+    }
+
+    #intro .intro-title {
+        font-size: 24px;
+        line-height: 33px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    #intro .title-desc {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    #intro .title-desc-desc {
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+        margin-bottom: 48px;
+    }
+    #intro .intro-car{
+        width: 280px;
+        margin-bottom: 0px;
+    }
+    #intro .cards  {
+        max-width: 500px;
+    }
+    #intro .cards  .card{
+        max-width: 69px;
+        margin: 21px 36px;
+    }
+    #intro .cards  card img{
+        width: 25px;
+    }
+    #intro .cards  card h2{
+        font-size: 25px;
+    }
+    #intro .cards  card p{
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
