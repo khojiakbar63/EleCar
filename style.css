@@ -12,10 +12,20 @@
 body{
     font-family: "Exo", sans-serif;
 }
+/*-----------------Top-header*/
+.top-header{
+    background-color: greenyellow;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
 /*-------------------Header*/
 header {
     position: fixed;
-    top: 0;
+    top: 58px;
     background-color: #0A0A0B;
     height: 80px;
     width: 100%;
@@ -48,6 +58,9 @@ header .menu-icon{
 }
 .btn:hover{
     background: rgba(65, 119, 220, 0.71);
+}
+.top-0 {
+    top: 0;
 }
 .header-wrapper {
     display: flex;
