@@ -322,7 +322,6 @@ header .side-panel .side-panel-list li a{
     padding: 32px 24px;
     position: relative;
 }
-
 #choose #cards .card .car-brand {
     font-size: 24px;
     font-weight: 600;
@@ -342,7 +341,6 @@ header .side-panel .side-panel-list li a{
     margin-bottom: 21px;
     width: 100%;
 }
-
 #choose #cards .card .car-km {
     display: flex;
     align-items: center;
@@ -378,14 +376,41 @@ header .side-panel .side-panel-list li a{
     right: 0;
 }
 
+/*----------------Feature Section*/
+#feature {
+    padding: 72px 0 80px;
+    background-color: #0A0A0B;
+    position: relative;
+    height: 100vh;
+}
+#feature .feature-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 64px;
+    color: #F1F2F3;
+    text-align: center;
+}
+#feature .car-on-map{
+    position: relative;
+}
+#feature .car-on-map .map{
+    position: sticky;
+    bottom: 30%;
+    left: 25%;
+}
+#feature .car-on-map .car-map{
+    position: absolute;
+    bottom: 0%;
+    left: 45%;
+}
 
-
-
-
-
-
-
-
+/*----------------Luxury Section*/
+#luxury {
+    background-color: #0A0A0B;
+    padding: 72px 0;
+}
+.luxury-title
 
 
 /*-------------------MEDIA QUERY--------------*/
