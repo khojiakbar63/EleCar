@@ -110,19 +110,32 @@ showEye.addEventListener('click', () => {
 
 // Select language
 select.addEventListener('change', (e) => {
-    listItem[0].textContent = languages[e.target.value].home,
-    listItem[1].textContent = languages[e.target.value].about,
-    listItem[2].textContent = languages[e.target.value].popular,
-    listItem[3].textContent = languages[e.target.value].feature,
-    introTitle.textContent = languages[e.target.value].introTitle,
-    aboutTitle.textContent = languages[e.target.value].aboutTitle,
-    chooseTitle.textContent = languages[e.target.value].chooseTitle,
-    featureTitle.textContent = languages[e.target.value].featureTitle,
-    luxuryTitle.textContent = languages[e.target.value].luxuryTitle,
-    offerTitle.textContent = languages[e.target.value].offerTitle,
-    formTitle.textContent = languages[e.target.value].formTitle,
-    formDesc.textContent = languages[e.target.value].formDesc
+    localStorage.setItem('lang', JSON.stringify(languages[e.target.value]))
+    setLanguage()
 })
+
+function setLanguage() {
+    const local = JSON.parse(localStorage.getItem('lang'))
+
+    listItem[0].textContent = 'local.home',
+    listItem[1].textContent = local.about,
+    listItem[2].textContent = local.popular,
+    listItem[3].textContent = local.feature,
+    introTitle.textContent = local.introTitle,
+    aboutTitle.textContent = local.aboutTitle,
+    chooseTitle.textContent = local.chooseTitle,
+    featureTitle.textContent = local.featureTitle,
+    luxuryTitle.textContent = local.luxuryTitle,
+    offerTitle.textContent = local.offerTitle,
+    formTitle.textContent = local.formTitle,
+    formDesc.textContent = local.formDesc
+}
+setLanguage()
+
+
+
+
+
 
 // Modes
 selectMode.addEventListener('change', (e) => {
