@@ -14,6 +14,7 @@
 </head>
 <body>
 
+
 <div class="top-header">
     <div class="container">
         <h4 class="top-header-title">EleCar</h4>
@@ -28,11 +29,11 @@
             <div class="header-wrapper">
                 <img class="logo" src="images/Logo.svg">
 
-                <ul class="list">
+                <ul id="list" class="list">
                     <li class="list-item"><a href="#home" class="active">Home</a></li>
                     <li class="list-item"><a href="#about">About</a></li>
-                    <li class="list-item"><a href="#">Popular</a></li>
-                    <li class="list-item"><a href="#">Featured</a></li>
+                    <li class="list-item"><a href="#luxury">Popular</a></li>
+                    <li class="list-item"><a href="#form">Featured</a></li>
 
                     <select id="select">
                         <option value="en">English</option>
@@ -40,6 +41,12 @@
                         <option value="uz">Uzbek</option>
                         <option value="ru">Russian</option>
                         <option value='kr'>Korean</option>
+                    </select>
+
+                    <select id="modes">
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+
                     </select>
                 </ul>
 
@@ -127,7 +134,10 @@
 
             </div>
         </section>
-
+        <!--Loader-->
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+        </div>
         <!-- Choose section    -->
         <section id="choose">
             <div class="container">
@@ -274,6 +284,7 @@
         </div>
     </footer>
     <!----------------Js Link----------------->
+<script src="modes.js"></script>
 <script src="lang.js"></script>
 <script src="db.js"></script>
 <script src="utilities.js"></script>
