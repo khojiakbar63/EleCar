@@ -117,7 +117,7 @@ select.addEventListener('change', (e) => {
 function setLanguage() {
     const local = JSON.parse(localStorage.getItem('lang'))
 
-    listItem[0].textContent = 'local.home',
+    listItem[0].textContent = local.home,
     listItem[1].textContent = local.about,
     listItem[2].textContent = local.popular,
     listItem[3].textContent = local.feature,
