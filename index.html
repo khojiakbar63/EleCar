@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <!--  Google Fonts Exo  -->
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
@@ -31,6 +33,14 @@
                     <li class="list-item"><a href="#about">About</a></li>
                     <li class="list-item"><a href="#">Popular</a></li>
                     <li class="list-item"><a href="#">Featured</a></li>
+
+                    <select id="select">
+                        <option value="en">English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="uz">Uzbek</option>
+                        <option value="ru">Russian</option>
+                        <option value='kr'>Korean</option>
+                    </select>
                 </ul>
 
                 <img class="menu-icon" src="images/menu-icon.svg">
@@ -139,25 +149,132 @@
                 <div class="car-on-map">
                     <img class="map" src="./images/Map.svg" alt="map">
                     <img  class="car-map" src="./images/car-onmap.svg" alt="car">
+
                 </div>
 
             </div>
 
         </section>
 
+        <!--Luxury section-->
         <section  id="luxury">
             <div class="container">
                 <h3 class="luxury-title">Featured Luxury Cars</h3>
-                <div id="luxury-mini-cards">
-                    <span><img src="./images/tesla.svg" alt="tesla"></span>
-                    <span><img src="./images/audi-logo.svg" alt="audi"></span>
-                    <span><img src="./images/porsche-logo.svg" alt="porsche"></span>
+
+                <div class="btn-mini-cards">
+                    <button id="all-btn" class="mini-btn">All</button>
+                    <div class="luxury-mini-cards none">
+                        <span class="mini-logos"><img src="./images/tesla.svg" alt="tesla"></span>
+                        <span class="mini-logos"><img src="./images/audi-logo.svg" alt="audi"></span>
+                        <span class="mini-logos"><img src="./images/porsche-logo.svg" alt="porsche"></span>
+                    </div>
+                </div>
+                <div id="cards2">
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--  Offer section ---->
+        <section id="offer">
+
+            <div class="container">
+
+                <div class="wrapper">
+
+                    <div class="left">
+                        <h2 class="left-title">Do You Want To Receive
+                            Special Offers?</h2>
+                        <p class="left-desc">Be the first to receive all the information about our products and new cars by email by subscribing to our mailing list.</p>
+                        <button class="btn">Subscribe Now</button>
+                    </div>
+
+                    <img src="images/subscribe%20car.svg">
+
+
+                </div>
+            </div>
+        </section>
+
+        <!--  Logos section ---->
+        <section id="logos">
+            <div class="container">
+                <div class="wrapper">
+                    <img src="./images/porsche-logo.svg" alt="porsche">
+                    <img src="./images/audi-logo.svg" alt="audi">
+                    <img src="./images/tesla.svg" alt="tesla">
+                    <img src="./images/bmw.svg" alt="bmw">
+                    <img src="./images/lambor.svg" alt="lambor">
+                    <img src="./images/lexus.svg" alt="lexus">
+                </div>
+            </div>
+        </section>
+
+        <!--Form Section-->
+        <section id="form">
+            <div class="container">
+                <div class="wrapper">
+                    <h2 class="form-title">Buy one!</h2>
+                    <p class="form-desc">Fill out the form below, and we will contact you as soon as possible.</p>
+                    <form action="#" class="form">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email">
+                        <label for="input-password">
+                            <input id="input-password" type="password" placeholder="Password">
+                            <span id="show-eye" class="show-eye"><i class='bx bx-show' style='color:#e3dada'></i></span>
+                        </label>
+                        <button class="form-btn">Send</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <div class="wrapper">
+
+                <div class="wrapper-first">
+                    <img src="./images/footerlogo.svg" alt="footerlogo">
+                    <p>We offer the best electric cars of the most recognized brands in the world.</p>
+                </div>
+
+                <div>
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Shop</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">Request a quote</a></li>
+                        <li><a href="#">Find a dealer</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="wrapper-last">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li><a href="#"><img src="./images/face.svg" alt="facebook"></a></li>
+                        <li><a href="#"><img src="./images/insta.svg" alt="insta"></a></li>
+                        <li><a href="#"><img src="./images/twit.svg" alt="twit"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> © Bedimcode. All rights reserved</p>
+        </div>
+    </footer>
     <!----------------Js Link----------------->
+<script src="lang.js"></script>
 <script src="db.js"></script>
 <script src="utilities.js"></script>
 <script src="app.js"></script>

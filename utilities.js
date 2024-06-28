@@ -2,6 +2,9 @@
 function $(selector) {
     return document.querySelector(selector);
 }
+function $$(selector) {
+    return document.querySelectorAll(selector);
+}
 
 //Create Element Function
 function createElement(tagName, classList, content) {
